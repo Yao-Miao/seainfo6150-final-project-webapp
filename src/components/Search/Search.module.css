@@ -1,0 +1,87 @@
+.SearchDiv {
+  height: 100%;
+}
+
+.Search {
+  background-color: #fff;
+  border-radius: 50px;
+  display: flex;
+  padding-left: 5%;
+  transition: all 0.3s;
+  height: 95%;
+}
+.Search:focus-within {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(7, 2, 0, 0.08);
+}
+.Search__field {
+  border: none;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1rem;
+  width: 30vw;
+}
+.Search__field:focus {
+  outline: none;
+}
+.Search__field::placeholder {
+  color: #dad0cc;
+}
+
+.btn{
+  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  border-radius: 50px;
+  border: none;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.btn:hover{
+  transform: scale(1.05);
+}
+.btn:focus{
+  outline: none;
+}
+.btn > *:first-child{
+  margin-right: 10px;
+}
+
+.btn {
+  padding: 1.3rem 3rem;
+  font-size: 1.4rem;
+}
+.btn svg {
+  height: 2.25rem;
+  width: 2.25rem;
+  fill: currentColor;
+}
+
+@media (max-width: 600px){
+  .Search {
+    height: 75%;
+  }
+  .Search__field {
+    font-size: 0.5rem;
+    width: 35vw;
+  }
+  .btn {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.2rem;
+  }
+  .btn > *:first-child{
+    margin-right: 1px;
+  }
+  .btn svg {
+    height: 0.8rem;
+    width: 0.8rem;
+    fill: currentColor;
+  }
+}
+
+
+
+
