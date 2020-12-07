@@ -12,7 +12,7 @@ function Category(props) {
     const fetchData = async () => {
       // put data fetching code here!
       const response = await fetch(
-        "http://demo6174807.mockable.io/" + categoryTag
+        "https://demo6174807.mockable.io/" + categoryTag
       );
       const responseJson = await response.json();
       setFetchedData(responseJson);
