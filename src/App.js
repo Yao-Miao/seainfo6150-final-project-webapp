@@ -1,3 +1,4 @@
+import React from "react";
 import './App.css';
 import Layout from './hoc/Layout/Layout';
 import HomeContainer from './containers/HomeContainer/HomeContainer';
