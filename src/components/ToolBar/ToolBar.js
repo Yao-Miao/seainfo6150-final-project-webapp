@@ -3,6 +3,7 @@ import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
 import Navigation from "../Navigation/Navigation";
 /*import DrawerToggle from "../SideDrawer/DrawerToggle/DrawerToggle"*/
+
 import classes from "./ToolBar.module.css";
 const toolbar = (props) => (
   <header className={classes.Toolbar}>
@@ -10,7 +11,7 @@ const toolbar = (props) => (
       <Logo />
     </div>
     <div className={classes.Search}>
-      <Search />
+      <Search history={props.history}/>
     </div>
     <nav className={classes.Nav}>
       <Navigation />

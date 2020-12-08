@@ -4,10 +4,10 @@ import CategoryItem from "../CategoryItem/CategoryItem";
 import classes from "./CategoryList.module.css";
 
 const categoryList = (props) => {
-  const itemArray = Object.values(props.categoryData.category)
+  const itemArray = Object.values(props.categoryData.menu_category)
   const displayContent = itemArray.map((key) => {
     return (
-      <CategoryItem name={key} key={key} setRecipeType={props.setRecipeType}>
+      <CategoryItem name={key} key={key} currentCategory={props.currentCategory}>
       </CategoryItem>
     );
   });

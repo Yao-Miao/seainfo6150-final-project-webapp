@@ -3,12 +3,22 @@
 }
 
 .List__link:link,
-.List__link:visited {
+.List__link:visited{
   display: flex;
   align-items: center;
   padding: 1rem 1rem 1rem 2rem;
   transition: all 0.3s;
   border-right: 1px solid #fff;
+  text-decoration: none;
+}
+
+.List__link_visited {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem 1rem 2rem;
+  transition: all 0.3s;
+  border-right: 1px solid #fff;
+  background-color: #f9f5f3;
   text-decoration: none;
 }
 .List__link:hover {

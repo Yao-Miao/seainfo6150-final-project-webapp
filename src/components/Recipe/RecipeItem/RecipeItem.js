@@ -5,7 +5,7 @@ const recipeItem = (props) => {
   return (
     <div className={classes.ItemContainer}>
       <div>
-        <a className={classes.recipe__link} href="#">
+        <a className={classes.recipe__link} href={"/recipe/" + props.recipe.recipe_id}>
           <figure className={classes.recipe__fig}>
             <img src={props.recipe.image_url} alt={props.recipe.title} />
           </figure>

@@ -2,7 +2,7 @@
     margin: 10px;
     flex-direction: column;
     display: grid;
-    grid-template-rows: 70% 15% 15%
+    grid-template-rows: 70% 18% 12%;
 }
 .recipe__link:link,
 .recipe__link:visited{

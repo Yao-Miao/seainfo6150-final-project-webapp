@@ -1,0 +1,20 @@
+.Container {
+  max-width: 80rem;
+  margin: 4vw auto;
+  margin-top: 10rem;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
+}
+.icon {
+  margin-top: 1rem;
+  height: 15rem;
+  width: 15rem;
+}
+.p1 {
+  font-size: 3rem;
+}
+.p2 {
+  font-size: 2rem;
+}

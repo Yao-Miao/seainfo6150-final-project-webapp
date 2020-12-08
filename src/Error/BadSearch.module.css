@@ -1,0 +1,16 @@
+.Container {
+  background-color: #f9f5f3;
+  padding: 3rem 0;
+  padding-left: 0;
+}
+.icon {
+  margin-top: 1rem;
+  height: 15rem;
+  width: 15rem;
+}
+.p1 {
+  font-size: 3rem;
+}
+.p2 {
+    font-size: 2rem;
+  }

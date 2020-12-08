@@ -1,0 +1,28 @@
+
+.recipe__item {
+  display: grid;
+  grid-template-columns: 10% 20% 70%;
+}
+.recipe__count {
+ padding-top: 0.2rem;
+  margin-right: 0.5rem;
+  flex: 0 0 auto;
+}
+.recipe__ingredients {
+    padding-top: 0.2rem;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  background-color: #f2efee;
+  text-align: left;
+}
+
+.icon {
+  height: 1.8rem;
+  width: 1.8rem;
+  fill: #f59a83;
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 1rem;
+  flex: 0 0 auto;
+  margin-top: 0.1rem;
+}

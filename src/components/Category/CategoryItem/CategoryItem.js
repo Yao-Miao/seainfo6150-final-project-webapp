@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from "react";
+import React from "react";
 
 import classes from "./CategoryItem.module.css";
 
@@ -9,9 +9,14 @@ const categoryItem = (props) => {
     const oldLabStyle = labStyle;
     setLabStyle(!oldLabStyle);
   }*/
+  let linkClass = classes.List__link;
+  if (props.name === props.currentCategory) {
+    linkClass = classes.List__link_visited;
+  }
+
   return (
-    <li onClick={() => props.setRecipeType(props.name)}>
-      <a className={classes.List__link} href={"#"}>
+    <li>
+      <a className={linkClass} href={"/category/" + props.name}>
         <div>
           <h4 className={classes.Item__name}>{props.name}</h4>
         </div>
