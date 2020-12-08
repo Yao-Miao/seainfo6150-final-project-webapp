@@ -7,10 +7,11 @@ import SearchResult from "./containers/SearchResult/SearchResult";
 import RecipeContainer from "./containers/RecipeContainer/RecipeContainer";
 import CategoryContainer from "./containers/CategoryContainer/CategoryContainer";
 import Error from "./Error/Error";
+import { createBrowserHistory } from "history";
 
-function App(props) {
+const history = createBrowserHistory();
+function App() {
   const [searchVal, setSearchVal] = useState("pizza");
-  let history = props.history;
   return (
     <div className="App">
 
