@@ -11,7 +11,7 @@ const toolbar = (props) => (
       <Logo />
     </div>
     <div className={classes.Search}>
-      <Search history={props.history}/>
+      <Search history={props.history} setSearchVal={props.setSearchVal}/>
     </div>
     <nav className={classes.Nav}>
       <Navigation />

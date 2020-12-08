@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Switch, Route, useHistory, Link } from "react-router-dom";
 import "./App.css";
 import ToolBar from "./components/ToolBar/ToolBar";
@@ -8,20 +8,14 @@ import RecipeContainer from "./containers/RecipeContainer/RecipeContainer";
 import CategoryContainer from "./containers/CategoryContainer/CategoryContainer";
 import Error from "./Error/Error";
 
-function App() {
-  let history = useHistory();
+function App(props) {
+  const [searchVal, setSearchVal] = useState("pizza");
+  let history = props.history;
   return (
     <div className="App">
-      {/*<Layout>
-        <HomeContainer/>
-      </Layout>*/}
 
+      <ToolBar history={history} setSearchVal={setSearchVal}/>
 
-      <ToolBar history={history} />
-
-      {/*<li>
-        <Link to="/">Home</Link>
-      </li>*/}
       <Switch>
         <Route basename="" path="/" exact component={HomeContainer} />
         <Route path="/category" exact component={CategoryContainer} />

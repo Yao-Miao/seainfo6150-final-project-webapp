@@ -7,8 +7,7 @@ const search = (props) => {
   let categoryInput;
   function clickSearch() {
     console.log(categoryInput.value);
-    //props.history.push("/category/" + categoryInput.value);
-    props.history.push("/category/salad");
+    props.history.push("/category/" + categoryInput.value);
   }
   /*
   <button className={classes.btn} onClick={clickSearch}>
@@ -24,10 +23,12 @@ const search = (props) => {
           placeholder="Search over 1,000,000 recipes..."
           ref={(input) => (categoryInput = input)}
         />
+
         <button className={classes.btn} onClick={clickSearch}>
           <BiSearchAlt2 />
           <span>Search</span>
         </button>
+        
       </form>
     </div>
   );
