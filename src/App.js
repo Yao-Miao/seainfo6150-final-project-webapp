@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, useHistory } from "react-router-dom";
+import { Switch, Route, useHistory, createBrowserHistory } from "react-router-dom";
 import './App.css';
 import ToolBar from "./components/ToolBar/ToolBar"
 import HomeContainer from './containers/HomeContainer/HomeContainer';
@@ -22,7 +22,7 @@ function App() {
 
       <ToolBar history={history}/>
       <Switch>
-        <Route path="/" exact component={HomeContainer} />
+        <Route path= "/" exact component={HomeContainer} />
         <Route path="/category" exact component={CategoryContainer} />
         <Route path="/category/:category" 
         exact

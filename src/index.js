@@ -6,7 +6,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <Router basename={"/seainfo6150-final-project-webapp"}>
+  <Router basename={/github.io/.test(window.location) ? "/seainfo6150-final-project-webapp" : ""}>
     <App />
   </Router>,
   document.getElementById('root')

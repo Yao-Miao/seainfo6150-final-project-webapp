@@ -6,6 +6,7 @@ import TabItem from "./Tab/TabItem";
 
 const categoryTab = (props) => {
   const itemArray = Object.values(props.categoryData)
+  itemArray.sort();
   const displayContent = itemArray.map((key) => {
     return (
       <TabItem name={key} key={key}/>
