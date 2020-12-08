@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import classes from "./CategoryItem.module.css";
 
@@ -13,15 +14,17 @@ const categoryItem = (props) => {
   if (props.name === props.currentCategory) {
     linkClass = classes.List__link_visited;
   }
-
-  return (
-    <li>
-      <a className={linkClass} href={"/category/" + props.name}>
+  /*<a className={linkClass} href={"/category/" + props.name}>
         <div>
           <h4 className={classes.Item__name}>{props.name}</h4>
         </div>
-      </a>
-    </li>
+      </a> */
+  return (
+    <Link to={"/category/" + props.name} className={linkClass}>
+        <div>
+          <h4 className={classes.Item__name}> {props.name} </h4>
+        </div>
+    </Link>
   );
 };
 

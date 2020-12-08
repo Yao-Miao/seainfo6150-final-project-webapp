@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import classes from "./NavigationItem.module.css";
 
@@ -7,9 +8,16 @@ const navigationItem = (props) => (
     className={classes.NavigationItem}
     onClick={()=>props.handleClick(props.name)}
   >
-    <a href={props.link} className={props.active ? classes.active : null}>
+    <Link to={props.link}  className={classes.NavigationItem}> 
+    {props.name}
+    </Link>
+
+    
+    {/*<a href={props.link} className={props.active ? classes.active : null}>
       {props.name}
-    </a>
+    </a>*/}
+
+
   </li>
 );
 

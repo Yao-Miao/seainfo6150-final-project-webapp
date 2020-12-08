@@ -1,15 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import classes from "./RecipeItem.module.css";
 
 const recipeItem = (props) => {
   return (
     <div className={classes.ItemContainer}>
       <div>
-        <a className={classes.recipe__link} href={"/recipe/" + props.recipe.recipe_id}>
+        <Link
+          to={"/recipe/" + props.recipe.recipe_id}
+          className={classes.recipe__link}
+        >
           <figure className={classes.recipe__fig}>
             <img src={props.recipe.image_url} alt={props.recipe.title} />
           </figure>
-        </a>
+        </Link>
       </div>
 
       <div>

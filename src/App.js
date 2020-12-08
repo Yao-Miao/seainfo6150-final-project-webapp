@@ -17,11 +17,11 @@ function App() {
       </Layout>*/}
 
 
-      {/*<ToolBar history={history} />*/}
+      <ToolBar history={history} />
 
-      <li>
+      {/*<li>
         <Link to="/">Home</Link>
-      </li>
+      </li>*/}
       <Switch>
         <Route basename="" path="/" exact component={HomeContainer} />
         <Route path="/category" exact component={CategoryContainer} />
