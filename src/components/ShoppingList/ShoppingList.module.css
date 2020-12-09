@@ -11,9 +11,45 @@
   padding: 0rem 0rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .shopping__list {
   list-style: none;
   /*max-height: 60rem;
   overflow: scroll;*/
+}
+
+.btn_small,
+.btn_small:link,
+.btn_small:visited {
+  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  border-radius: 10rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: none;
+  height: 2rem;
+  width: 6rem;
+  font-size: 1.1rem;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.btn_small:hover {
+  transform: scale(1.05);
+}
+.btn_small:focus {
+  outline: none;
+}
+.btn_small > *:first-child {
+  margin-right: 1rem;
+}
+
+.icon{
+  height: 2rem;
+  width: 2rem;
 }

@@ -7,19 +7,27 @@ import SearchResult from "./containers/SearchResult/SearchResult";
 import RecipeContainer from "./containers/RecipeContainer/RecipeContainer";
 import CategoryContainer from "./containers/CategoryContainer/CategoryContainer";
 import Error from "./Error/Error";
-import { createBrowserHistory } from "history";
+import FomrContainer from "./containers/FormContanier/FormContainer";
+import Welcome from "./containers/Welcome/Welcome";
 
-const history = createBrowserHistory();
 function App() {
+  const history = useHistory();
   const [searchVal, setSearchVal] = useState("pizza");
+
   return (
     <div className="App">
-
-      <ToolBar history={history} setSearchVal={setSearchVal}/>
+      <ToolBar history={history} setSearchVal={setSearchVal} />
 
       <Switch>
-        <Route basename="" path="/" exact component={HomeContainer} />
+        <Route path="/" exact component={HomeContainer} />
         <Route path="/category" exact component={CategoryContainer} />
+        <Route
+          path="/categoryTab/:tabTag"
+          exact
+          render={({ match }) => (
+            <CategoryContainer tabTag={match.params.tabTag} />
+          )}
+        />
         <Route
           path="/category/:category"
           exact
@@ -34,6 +42,16 @@ function App() {
             <RecipeContainer recipeId={match.params.recipeId} />
           )}
         />
+        <Route path="/signup" exact render={()=>(<FomrContainer formType="signUp"/>)}/>
+        <Route path="/signin" exact render={()=>(<FomrContainer formType="signIn"/>)}/>
+        <Route
+          path="/welcome/?uname/?fname/?lname/?email/?tel/?gender"
+          exact
+          render={({ match }) => (
+            <Welcome uname={match.params.uname} fname={match.params.fname} lname={match.params.lname} email={match.params.email} tel={match.params.tel} gender={match.params.gender}/>
+          )}
+        />
+
         <Route component={Error} />
       </Switch>
     </div>

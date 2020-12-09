@@ -20,6 +20,13 @@ function Category(props) {
   }, [fetchedData]);
 
   if (props.useFor === "CategoryContainer" && !isEmpty(fetchedData)) {
+    if(props.tabTag){
+      return (
+        <div>
+          <CategoryTab categoryData={fetchedData.popular_category} categoryTag={props.tabTag} />
+        </div>
+      )
+    }
     return (
       <div>
         <CategoryTab categoryData={fetchedData.popular_category} categoryTag={"popular_category"} />

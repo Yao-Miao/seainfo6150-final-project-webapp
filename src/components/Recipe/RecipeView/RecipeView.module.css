@@ -162,6 +162,7 @@
   border: none;
   height: 2rem;
   font-size: 1.1rem;
+  text-decoration: none;
   text-transform: uppercase;
   color: #fff;
   cursor: pointer;

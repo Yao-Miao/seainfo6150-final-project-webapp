@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Aux from "../../hoc/Aux/Aux";
 import classes from "./HomeContainner.module.css";
 import Category from "../../components/Category/Category";
-import RecipeGrid from "../../components/Recipe/RecipeGrid/RecipeGrid"
+import RecipeGrid from "../../components/Recipe/RecipeGrid/RecipeGrid";
 import { render } from "@testing-library/react";
 
 function HomeContainer(props) {
@@ -10,8 +10,8 @@ function HomeContainer(props) {
   return (
     <Aux>
       <div className={classes.Container}>
-       <Category/>
-       <RecipeGrid recipeType={recipeType}/>
+        <Category />
+        <RecipeGrid recipeType={recipeType} />
       </div>
     </Aux>
   );

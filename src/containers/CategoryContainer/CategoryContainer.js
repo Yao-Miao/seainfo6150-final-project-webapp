@@ -9,7 +9,7 @@ function CategoryContainer(props) {
   return (
     <Aux>
       <div className={classes.Container}>
-        <Category useFor={"CategoryContainer"}/>
+        <Category useFor={"CategoryContainer"} tabTag ={props.tabTag}/>
       </div>
     </Aux>
   );

@@ -1,0 +1,91 @@
+.form{
+    align-content: center;
+}
+.info {
+  display: grid;
+  grid-template-columns:  auto auto;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.label{
+    text-align: right;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding-right:1rem ;
+}
+.input{
+    font-size: inherit;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 200px;
+}
+.span{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 200px;
+}
+
+
+.btn_small,
+.btn_small:link,
+.btn_small:visited {
+  background-image: linear-gradient(to right bottom, #fbdb89, #f48982);
+  border-radius: 10rem;
+  padding-left: 1.8rem;
+  padding-right: 2rem;
+  border: none;
+  height: 2.5rem;
+  width: 10rem;
+  font-size: 1.4rem;
+  outline: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 48%;
+}
+.btn_small:hover {
+  transform: scale(1.05);
+}
+.btn_small:focus {
+  outline: none;
+}
+.btn_small > *:first-child {
+  margin-right: 1rem;
+}
+
+.send{
+    background: transparent;
+    color:  #fff;
+    outline: none;
+    border: none;
+    font-size: 1.4 rem;
+}
+
+
+
+
+/*.label{
+    cursor: pointer;
+    display: inline-block;
+    padding: 3px 6px;
+    text-align: right;
+    width: 150px;
+    vertical-align: top;
+}
+
+.radio_label{
+    vertical-align: top;
+}
+
+
+.input{
+    font-size: inherit;
+}
+*/
