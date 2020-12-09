@@ -42,10 +42,17 @@ function App() {
             <RecipeContainer recipeId={match.params.recipeId} />
           )}
         />
-        <Route path="/signup" exact render={()=>(<FomrContainer formType="signUp"/>)}/>
-        <Route path="/signin" exact render={()=>(<FomrContainer formType="signIn"/>)}/>
+        <Route path="/signup" exact render={()=>(<FomrContainer formType="signUp" history={history}/>)}/>
+        <Route path="/signin" exact render={()=>(<FomrContainer formType="signIn" history={history}/>)}/>
         <Route
-          path="/welcome/?uname/?fname/?lname/?email/?tel/?gender"
+          path="/welcome/:uname"
+          exact
+          render={({ match }) => (
+            <Welcome uname={match.params.uname}/>
+          )}
+        />
+        <Route
+          path="/welcome/:uname/:fname/:lname/:email/:tel/:gender"
           exact
           render={({ match }) => (
             <Welcome uname={match.params.uname} fname={match.params.fname} lname={match.params.lname} email={match.params.email} tel={match.params.tel} gender={match.params.gender}/>

@@ -1,14 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import classes from "./Form.module.css";
-import {FiSend} from "react-icons/fi";
+import { AiOutlineLogin } from "react-icons/ai";
 
-function SignInForm() {
+function SignInForm(props) {
+  function handleSubmit(event) {
+    event.preventDefault();
+    const uname = event.target.elements[0].value;
+    const path = `/welcome/${uname}`;
+    props.history.push(path);
+  }
   return (
     <div className={classes.container}>
-      <form className={classes.form}>
+      <form className={classes.form} onSubmit={handleSubmit}>
         <div className={classes.info}>
-        <label for="uname" className={classes.label}>
+          <label for="uname" className={classes.label}>
             User name:
           </label>
           <input
@@ -18,12 +24,11 @@ function SignInForm() {
             required
             className={classes.input}
           />
-        
         </div>
-        <Link className={classes.btn_small}>
-            <input type="submit" value="Sign In" className={classes.send}/>
-            <FiSend className={classes.icon}/>
-        </Link>
+        <button className={classes.btn_small}>
+          <input type="submit" value="Sign In" className={classes.send} />
+          <AiOutlineLogin className={classes.icon} />
+        </button>
       </form>
     </div>
   );

@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import classes from "./Form.module.css";
-import { FiSend } from "react-icons/fi";
-import PopWindow from "../PopWindow/PopWindow";
+import { AiOutlineUserAdd } from "react-icons/ai";
 
-function SignUpForm() {
+function SignUpForm(props) {
   //const [showModal, setShowModal] = useState(false);
   /*function handleClick() {
     setShowModal(true);
@@ -14,13 +12,25 @@ function SignUpForm() {
     setShowModal(false);
   }*/
 
+  function handleSubmit(event){
+    event.preventDefault()
+    const uname = event.target.elements[0].value;
+    const fname = event.target.elements[1].value;
+    const lname = event.target.elements[2].value;
+    const email = event.target.elements[3].value;
+    const tel = event.target.elements[4].value;
+    const gender = event.target.elements[5].value;
+    const path = `/welcome/${uname}/${fname}/${lname}/${email}/${tel}/${gender}`;
+    props.history.push(path);
+  }
+
   return (
     <div className={classes.container}>
       {/*<PopWindow
         show={showModal}
         modalClosed={cancelHandler}
       >test</PopWindow>*/}
-      <form className={classes.form} action="/welcome/">
+      <form className={classes.form} onSubmit={handleSubmit}>
         <div className={classes.info}>
           <label for="uname" className={classes.label}>
             User name:
@@ -89,7 +99,7 @@ function SignUpForm() {
         </div>
         <button className={classes.btn_small} >
           <input type="submit" value="Sign Up" className={classes.send}/>
-          <FiSend className={classes.icon} />
+          <AiOutlineUserAdd className={classes.icon} />
         </button>
       </form>
     </div>

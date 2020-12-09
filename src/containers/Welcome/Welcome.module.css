@@ -1,8 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&family=Lobster&family=Nerko+One&family=Pacifico&family=Russo+One&display=swap');
 .Container {
     max-width: 80rem;
     margin: 4vw auto;
-    background-color: #fff;
     border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 2rem 6rem 0.5rem rgba(101, 90, 86, 0.2);
+}
+.Hello{
+    font-size: 10rem;
+    font-weight: 900;
+    background: linear-gradient(to right bottom, #cf5829, #e09948);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+.name{
+    font-size: 6rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+    color: rgb(190, 73, 52);
+    font-family: 'Russo One', sans-serif;
+}
+
+.text{
+    font-size: 4rem;
+    font-weight: 150;
+    padding: 1rem;
+    
+    font-family: 'Pacifico', cursive;
+
 }

@@ -9,9 +9,9 @@ import SignInForm from "../../components/Form/SignInForm";
 function FomrContainer(props) {
   let displayContent = "";
   if (props.formType === "signUp") {
-    displayContent = <SignUpForm />;
+    displayContent = <SignUpForm history={props.history}/>;
   } else if (props.formType === "signIn") {
-    displayContent = <SignInForm />;
+    displayContent = <SignInForm history={props.history}/>;
   }
   return (
     <Aux>

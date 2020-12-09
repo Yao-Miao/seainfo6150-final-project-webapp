@@ -13,10 +13,14 @@
   box-sizing: border-box;
   z-index: 90;
 }
-
+.navDiv{
+    display: flex;
+}
 .Toolbar nav {
+  margin-top: 0.8rem;
   height: 100%;
 }
+
 
 .Logo {
   height: 80%;
